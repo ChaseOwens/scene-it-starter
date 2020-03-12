@@ -16,22 +16,6 @@ document.addEventListener('DOMContentLoaded', function(){
         return movieHtml;
     }
     var moviesContainer = document.getElementById('movies-container');
-    var form = document.getElementById('search-form')
-    form.addEventListener('submit', function(e){
-        e.preventDefault();
-        moviesContainer.innerHTML = MovieRender(movieData);
-    });});
-
-    function savetoWatchlist(imdbID){
-        var movie = movieData.find(function(currentMovie){
-        return currentMovie.imdbID == imdbID;
-        });
-        var watchlistJSON = localStorage.getItem('watchlist');
-        var watchlist = JSON.parse(watchlistJSON)
-            if(watchlist = null){
-                watchlist = Array();
-                watchlist.push(movie);
-                watchlistJSON = JSON.stringify(watchlist);
-                localStorage.setItem('watchlist', watchlistJSON);
-            }
-        }
+    var moviePush = localStorage.getItem('watchlist');
+    moviesContainer.innerHTML = MovieRender(moviePush);
+    });

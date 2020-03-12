@@ -1,5 +1,5 @@
 body {
-	background-color: #B2E9FD;
+	background-color: rgb(15, 15, 15);
 }
 
 .header h2 {
@@ -7,10 +7,48 @@ body {
 }
 
 .header p {
-	color: #50524F;
+	color: rgb(122, 122, 122);
 }
 
 .results {
 	margin-top: 20px;
 }
 
+#movies-container {
+	display: flex;
+	flex-direction: row;
+	flex-flow: wrap;
+	align-content: center;
+}
+
+img {
+	height: auto;
+	width: auto;
+}
+
+.card{
+	width: auto;
+	height: auto;
+	padding: 15px;
+	margin-left: 80px;
+	margin-right: 80px;
+	margin-top: 40px;
+	display: flex;
+	align-items: center;
+}
+
+.card-title{
+	text-align: center;
+	padding-top: 10px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-weight: bold;
+	font-size: large;
+}
+
+.card-text{
+	text-align: center;
+	padding-top: 10px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-weight: bold;
+	font-size: large;
+}
